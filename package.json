@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "typescript": "^3.1.6"
+  },
+  "scripts": {
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; ng build"
   }
 }
