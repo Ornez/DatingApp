@@ -2,17 +2,29 @@
 
 Implementation of a project involving the creation of a dating application using ASP.NET Core and Angular technologies.
 
-Project created 2023 March 18, in progress
+Project created 2023 March 18, finished 2023 May 16
+
+## Demo
+
+Application is published on https://da-course-dating-app.fly.dev/
 
 ## Technologies
 
-### ASP.NET Core
+### ASP.NET Core 7
 - Entity Framework (EF) Core
 - Authentication & Authorization with JWT
 - SignalR
+- SqLite (used during developing)
+- PostgreSQL (used as production database)
 
-### Angular
+### Angular 14
 - SignalR
+- RxJs
+- Bootstrap 5
+
+### Others
+- Docker
+- CI/CL
 
 ## Udemy course
 
