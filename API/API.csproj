@@ -20,4 +20,20 @@
         <PackageReference Include="SQLite" Version="3.13.0" />
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
     </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\3rdpartylicenses.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\assets\user.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\favicon.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.2b13baa7dd4f54c9.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.8a7cb27d142e3e19.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.cf011583fb81df9f.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.da909aa098b0ee2d.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.e9955780856cf8aa.woff2" />
+      <_ContentIncludedByDefault Remove="wwwroot\index.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\main.f56e737e21ccff18.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\polyfills.d7bd9d69524573e2.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\runtime.01fec06f14767966.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\styles.cea5742a09dfdd2d.css" />
+    </ItemGroup>
 </Project>
