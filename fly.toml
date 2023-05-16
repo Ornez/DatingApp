@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for da-course-dating-app on 2023-05-15T17:19:39+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "da-course-dating-app"
+primary_region = "waw"
+
+[env]
+  ASPNETCORE_URLS="http://+:8080"
+  CloudinarySettings__CloudName="dvax9uofb"
+  CloudinarySettings__ApiKey="272589268687761"
+
+[build]
+  image = "student232323/datingapp:latest"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
