@@ -35,5 +35,6 @@
       <_ContentIncludedByDefault Remove="wwwroot\polyfills.d7bd9d69524573e2.js" />
       <_ContentIncludedByDefault Remove="wwwroot\runtime.01fec06f14767966.js" />
       <_ContentIncludedByDefault Remove="wwwroot\styles.cea5742a09dfdd2d.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\main.9a7dd3abcf3211c3.js" />
     </ItemGroup>
 </Project>
