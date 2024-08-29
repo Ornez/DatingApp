@@ -48,8 +48,8 @@ public class UserRepository : IUserRepository
         query = query.Where(u => u.UserName != userParams.CurrentUsername);
         query = query.Where(u => u.Gender == userParams.Gender);
 
-        var minDateOfBirth = DateOnly.FromDateTime(DateTime.Today.AddYears(-userParams.MaxAge - 1));
-        var maxDateOfBirth = DateOnly.FromDateTime(DateTime.Today.AddYears(-userParams.MinAge));
+        var minDateOfBirth = DateTime.Today.AddYears(-userParams.MaxAge - 1);
+        var maxDateOfBirth = DateTime.Today.AddYears(-userParams.MinAge);
 
         query = query.Where(u => u.DateOfBirth >= minDateOfBirth && u.DateOfBirth <= maxDateOfBirth);
 

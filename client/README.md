@@ -1,27 +1,73 @@
-# Client
+# DatingApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.11.
+Implementation of a project involving the creation of a dating application using ASP.NET Core and Angular technologies.
 
-## Development server
+Project created 2023 March 18, finished 2023 May 16
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Demo
 
-## Code scaffolding
+Application is published on https://da-course-dating-app.fly.dev/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to run locally
 
-## Build
+### .NET Backend
+- Ensure SDK 7.0.202 is installed, or change it in DatingApp/global.json
+- Build and run application from Visual Studio
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Angular Client
+- Install mode nodules with 'npm install --force'
+- ng serve
 
-## Running unit tests
+### Database
+- docker run --name datingapp -e POSTGRES_PASSWORD=postgrespw -p 5432:5432 -d postgres
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Cloudinary (Database for photos)
+- Create account on cloudinary and write proper CloudName, ApiKey, ApiSecret
+- Create appsettings.json file
+```
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "CloudinarySettings": {
+    "CloudName": "API_CLOUD_NAME",
+    "ApiKey": "API_KEY",
+    "ApiSecret": "API_SECRET"
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost; Port=5432; User Id=postgres; Password=postgrespw; Database=datingapp"
+  },
+  "TokenKey": "super secret unguessable key"
+}
+```
 
-## Running end-to-end tests
+Application is running on https://localhost:4200/
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Technologies
 
-## Further help
+### ASP.NET Core 7
+- Entity Framework (EF) Core
+- Authentication & Authorization with JWT
+- SignalR
+- SqLite (used during developing)
+- PostgreSQL (used as production database)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Angular 14
+- SignalR
+- RxJs
+- Bootstrap 5
+
+### Others
+- Docker
+- CI/CL
+
+## Udemy course
+
+Udemy course "Build an app with ASPNET Core and Angular from scratch" by __Neil Cummings__ - 
+a practical example of how to build an application with ASP.NET Core API and Angular from start to finish.
+
+link to course: https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/

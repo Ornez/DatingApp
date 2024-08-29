@@ -6,7 +6,23 @@ Project created 2023 March 18, finished 2023 May 16
 
 ## Demo
 
-Application is published on https://da-course-dating-app.fly.dev/
+Application is published on https://dating-app-ornez-exanhncfafhkgxa4.polandcentral-01.azurewebsites.net/
+
+## How to run locally
+
+### .NET Backend
+- Ensure SDK 7.0.407 is installed, or change it in DatingApp/global.json
+- Build and run application from Visual Studio
+
+### Angular Client
+- Install mode nodules with 'npm install --force'
+- ng serve
+
+### Database
+Go to DatingApp level folder and use command:
+- docker compose up -d
+
+Application is running on https://localhost:4200/
 
 ## Technologies
 
@@ -15,7 +31,7 @@ Application is published on https://da-course-dating-app.fly.dev/
 - Authentication & Authorization with JWT
 - SignalR
 - SqLite (used during developing)
-- PostgreSQL (used as production database)
+- MS SQL Server (used as production database)
 
 ### Angular 14
 - SignalR

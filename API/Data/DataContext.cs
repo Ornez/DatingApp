@@ -2,6 +2,7 @@ using API.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 
 namespace API.Data;
 
@@ -50,7 +51,7 @@ public class DataContext : IdentityDbContext<AppUser, AppRole, int, IdentityUser
             .HasOne(s => s.TargetUser)
             .WithMany(l => l.LikedByUsers)
             .HasForeignKey(s => s.TargetUserId)
-            .OnDelete(DeleteBehavior.Cascade); // If error is here, change DeleteBehavior to .NoAction
+            .OnDelete(DeleteBehavior.NoAction); // If error is here, change DeleteBehavior to .NoAction
 
         builder.Entity<Message>()
             .HasOne(u => u.Recipient)
